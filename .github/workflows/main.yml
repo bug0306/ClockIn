@@ -1,0 +1,24 @@
+name: CheckIn
+
+# Controls when the action will run. 
+on:
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron: '10 8 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Set up Python'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+      - name: 'update'
+        run: /opt/hostedtoolcache/Python/3.7.9/x64/bin/python -m pip install --upgrade pip
+      - name: 'Install lib'
+        run: pip install -r ./requirements.txt
+      - name: 'Working'
+        run: python ./Main.py
