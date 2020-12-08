@@ -21,4 +21,4 @@ jobs:
       - name: 'Install lib'
         run: pip install -r ./requirements.txt
       - name: 'Working'
-        run: python ./Main.py
+        run: bash ./main.sh
