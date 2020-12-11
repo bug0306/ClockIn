@@ -94,7 +94,7 @@ def sendConfirm():
     if confirmUrl == "":
         logger.error("unable to parsing clockpage url when confirming info.")
         return False
-
+    confirmUrl='https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/first0'
     # 2.解析确认页面的包装页2
     req = requests.get(confirmUrl)
     req.encoding = "utf-8"
