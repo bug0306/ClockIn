@@ -39,7 +39,7 @@ def login():
     
     # 2.向解析出来的url发登录请求
     data = "uid=%s&upw=%s"%(Info.getUid(),Info.getPwd())
-    req = requests.post(InfoUrl,data)
+    req = requests.post(InfoUrl,data.encode('utf-8'))
     req.encoding = "utf-8"
     if not req.ok:
         logger.error("connect to url error when logging.")
