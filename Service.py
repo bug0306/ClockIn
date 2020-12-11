@@ -38,7 +38,7 @@ def login():
     logger.debug("Successfully parsed the infopageurl.")
     
     # 2.向解析出来的url发登录请求
-    data = "uid=%s&upw=%s"%(Info.getUid(),Info.getPwd())
+    data = "uid=%s&upw=%s"%(Info.getUid().encoding('utf-8'),Info.getPwd().encoding('utf-8'))
     req = requests.post(InfoUrl,data)
     req.encoding = "utf-8"
     if not req.ok:
