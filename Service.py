@@ -113,7 +113,7 @@ def sendConfirm():
             break
     if confirmUrl == "":
         logger.error("unable to parsing clockpage url when confirming info.")
-        return false
+        return False
     Info.setComfirmPageUrl(confirmUrl)
 
     # 3.得到确认页面
