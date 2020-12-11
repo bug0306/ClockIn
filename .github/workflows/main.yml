@@ -4,7 +4,7 @@ name: CheckIn
 on:
   push:
   schedule:
-    - cron: '39 9 * * *'
+    - cron: '45 9 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
