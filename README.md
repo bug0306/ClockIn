@@ -27,7 +27,7 @@
 
 4.Python Main.py运行时可能会需要某些包，smtp,requests直接一步一步pip install即可
 
-5.自动打卡是为解放双手，所以在Windows和Linux设置定时任务，前者Bat，后者Shell，前者任务计划程序，后者Contrab。
+5.自动打卡是为解放双手，所以在Windows,前者Bat，后者Shell，前者任务计划程序，后者Contrab。
 
 **设置Windows定时执行程序脚本参照：**
 
